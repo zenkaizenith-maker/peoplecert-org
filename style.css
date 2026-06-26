@@ -1,0 +1,918 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+:root {
+  --orange: #ff3200;
+  --dark-bg: #1a1f2e;
+  --text-dark: #2c2c2c;
+  --text-mid: #555;
+  --border: #ddd;
+  --font: 'Source Sans Pro', Arial, sans-serif;
+  --font-display: 'Raleway', Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  background: #fff;
+  color: var(--text-dark);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* ─── TOP BAR ─── */
+
+.topbar {
+  background: var(--dark-bg);
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  font-size: 13px;
+  font-family: var(--font);
+}
+
+.topbar-left,
+.topbar-right {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.topbar-left a,
+.topbar-right a {
+  color: #b0b8c8;
+  text-decoration: none;
+  padding: 0 18px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  transition: color 0.15s;
+}
+
+.topbar-left a:hover,
+.topbar-right a:hover {
+  color: #fff;
+}
+
+.topbar-left a.active {
+  border-bottom: 2px solid var(--orange);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ─── HEADER ─── */
+
+.header {
+  height: 72px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  border-bottom: 1px solid #e8e8e8;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+.logo img{
+height:60px;
+width:auto;
+display:block;
+}
+
+/* Logo — matches PeopleCert exactly */
+.logo-text {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  text-decoration: none;
+  gap: 0;
+}
+
+.logo-q {
+  background: var(--orange);
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 7px;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.logo-people {
+  color: var(--orange);
+  font-weight: 800;
+  font-size: 21px;
+}
+
+.logo-cert {
+  color: var(--dark-bg);
+  font-weight: 800;
+  font-size: 21px;
+}
+
+/* Nav — matches the header sub-nav in image 4 */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  height: 72px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #2c2c2c;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 20px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+  letter-spacing: 0.2px;
+}
+
+.nav a:hover {
+  color: var(--orange);
+}
+
+.nav a.active {
+  color: var(--orange);
+  border-bottom-color: var(--orange);
+}
+
+/* Header icons (cart + user) */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.header-icons svg,
+.header-icons i {
+  color: #555;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+/* ─── HERO ─── */
+
+.hero{
+position:relative;
+height:165px;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* Grid/architectural photo effect — matches the building grid in images 3 & 4 */
+.hero-bg{
+position:absolute;
+inset:0;
+
+background-image:
+url("images/verification-banner.png");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+/* Soft vignette over the grid */
+.hero-overlay{
+position:absolute;
+inset:0;
+background:rgba(255,255,255,0.25);
+}
+
+/* "Certificate Verification Service" in orange — matches image 3 & 4 exactly */
+.hero-title{
+position:relative;
+z-index:2;
+font-size:30px;
+font-weight:300;
+color:#ff3200;
+font-family:'Montserrat',sans-serif;
+}
+
+/* ─── BREADCRUMB ─── */
+
+.breadcrumb {
+  padding: 11px 40px;
+  font-size: 13px;
+  background: #fafafa;
+  border-bottom: 1px solid #ebebeb;
+  color: #777;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.breadcrumb a {
+  color: #555;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--orange);
+}
+
+.breadcrumb .sep {
+  color: #aaa;
+  margin: 0 2px;
+}
+
+/* ─── MAIN CONTENT ─── */
+
+.main {
+  max-width: 920px;
+  margin: auto;
+  padding: 52px 24px 90px;
+}
+
+.main-intro{
+font-size:22px;
+font-weight:300;
+color:#2d3d59;
+text-align:center;
+margin-bottom:70px;
+}
+
+/* ─── STEPS — no outer border, only vertical dividers between columns ─── */
+
+.steps{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+max-width:900px;
+margin:0 auto 90px auto;
+}
+
+.step{
+padding:0 40px;
+text-align:center;
+font-size:14px;
+font-weight:300;
+line-height:1.6;
+color:#555;
+min-height:170px;
+border-right:1px solid #d7d7d7;
+}
+
+.step:last-child{
+border-right:none;
+}
+.step:last-child {
+  border-right: none;
+}
+
+.step-num{
+display:block;
+font-size:18px;
+font-weight:300;
+margin-bottom:15px;
+color:#444;
+}
+
+/* ─── FORM ─── */
+
+.form-section{
+margin-top:70px;
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  gap: 0;
+  width: 100%;
+  max-width: 680px;
+  justify-content: center;
+}
+
+/* Bold labels — matches PeopleCert image 1 */
+.form-row label{
+width:170px;
+font-size:14px;
+font-weight:600;
+text-align:right;
+}
+
+/* Wide, taller inputs — matches PeopleCert image 1 */
+.form-row input{
+width:300px;
+height:22px;
+padding:2px 5px;
+font-size:13px;
+}
+
+.form-row input:focus {
+  border-color: #888;
+}
+
+.form-row input::placeholder {
+  color: #aaa;
+  font-style: italic;
+  font-size: 13px;
+}
+
+/* Captcha row — centered under inputs, offset to align with input column */
+.captcha-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 6px;
+  margin-bottom: 14px;
+  /* Offset by label width to align captcha under the input */
+  padding-left: 160px;
+  width: 100%;
+  max-width: 680px;
+}
+
+/* Larger captcha image — matches PeopleCert image 1 */
+.captcha-img {
+  width: 150px;
+  height: 40px;
+  background: #f2f2f2;
+  border: 1px solid #c8c8c8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.captcha-text {
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 5px;
+  color: #7a7a7a;
+  transform: rotate(-5deg);
+  user-select: none;
+  font-family: Georgia, serif;
+}
+
+.captcha-link {
+  color: var(--orange);
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font);
+}
+
+.captcha-link:hover {
+  color: #cc2800;
+}
+
+/* Submit row — aligns with input column */
+.submit-wrap{
+margin-top:15px;
+margin-left:170px;
+}
+
+/* Submit button — plain gray, small, matches PeopleCert image 1 */
+.submit-btn {
+  padding: 2px 8px;
+  border: 1px solid #cfcfcf;
+  background: #efefef;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: var(--font);
+  color: #333;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.submit-btn:hover {
+  background: #e4e4e4;
+  border-color: #aaa;
+}
+
+/* ─── RESULT ─── */
+
+.result-section {
+  display: none;
+  margin-top: 50px;
+}
+
+.result-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.result-intro {
+  font-size: 13px;
+  max-width: 660px;
+  line-height: 1.55;
+  margin: 0 auto 18px auto;
+  text-align: center;
+  color: #555;
+}
+
+/* Certificate card — the white bordered card in the result */
+.cert-card {
+  width: 443px;
+  margin: 0 auto;
+  border: 1px solid #444;
+  background: #fff;
+}
+
+.cert-card-header {
+  padding: 6px 10px;
+  border-bottom: 1px solid #ddd;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.lc-logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.lc-icon {
+  width: 20px;
+  height: 20px;
+  background: var(--orange);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.lc-text {
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: var(--font-display);
+}
+
+.cert-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cert-table td {
+  padding: 5px 12px;
+  font-size: 13px;
+  line-height: 1.3;
+  vertical-align: top;
+  border-bottom: none;
+}
+
+.cert-table td:first-child {
+  font-weight: 700;
+  width: 48%;
+  white-space: nowrap;
+  color: #111;
+}
+
+.cert-footer {
+  width: 443px;
+  margin: 14px auto;
+  border: 1px solid #777;
+  padding: 6px;
+  font-size: 12px;
+  text-align: center;
+  background: #fff;
+}
+
+.print-btn {
+  padding: 2px 10px;
+  font-size: 12px;
+  background: #f5f5f5;
+  border: 1px solid #999;
+  cursor: pointer;
+  font-family: var(--font);
+}
+
+/* ─── FOOTER — matches image 1 exactly ─── */
+
+.footer{
+background:#1f263a;
+padding:60px 0 40px;
+margin-top:40px;
+min-height:560px;
+}
+.footer-grid{
+display:grid;
+
+grid-template-columns:
+repeat(3, 1fr);
+
+max-width:900px;
+
+margin:0 auto;
+
+column-gap:90px;
+row-gap:80px;
+}
+.footer-col:nth-child(3){
+width:260px;
+} 
+/* Column headings with orange underline — matches image 1 */
+.footer-col h4 {
+  color: #fff;
+  margin-bottom: 18px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: var(--font-display);
+  letter-spacing: 0.3px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--orange);
+  display: inline-block;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+/* List items with orange "/" prefix — matches image 1 */
+.footer-col li {
+  margin-bottom: 9px;
+  font-size: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.footer-col li::before {
+  content: '/ ';
+  color: var(--orange);
+  font-weight: 700;
+  margin-right: 4px;
+  flex-shrink: 0;
+}
+
+.footer-col li a {
+  color: #b0b8c8;
+  text-decoration: none;
+  transition: color 0.15s;
+  line-height: 1.4;
+}
+
+.footer-col li a:hover {
+  color: #fff;
+}
+
+/* Membership column — "Elevate your career" + "Join now" button */
+.footer-col p {
+  font-size: 14px;
+  color: #b0b8c8;
+  margin-bottom: 18px;
+}
+
+/* "Join now" orange CTA — matches image 1 exactly */
+.footer-join-btn {
+  display: inline-block;
+  background: var(--orange);
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 32px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: background 0.15s;
+  border-radius: 2px;
+}
+
+.footer-join-btn:hover {
+  background: #e02b00;
+}
+
+.footer-bottom{
+max-width:900px;
+margin:40px auto 0;
+font-size:11px;
+color:rgba(255,255,255,.25);
+}
+.footer-col p{
+font-size:14px;
+color:#b7bfd1;
+margin-bottom:18px;
+}
+
+.footer-bottom a {
+  color: #7a8494;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #bbb;
+}
+.join-btn{
+display:inline-block;
+background:#ff4b0a;
+color:#fff;
+text-decoration:none;
+
+padding:12px 38px;
+border-radius:6px;
+font-size:15px;
+font-weight:700;
+margin-top:8px;
+}
+
+.join-btn:hover{
+background:#e54000;
+}
+
+.social-icons{
+display:flex;
+gap:14px;
+margin-top:20px;
+}
+
+.social-icons a{
+width:38px;
+height:38px;
+
+border:1px solid rgba(255,255,255,.7);
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:16px;
+font-weight:600;
+
+color:#fff;
+text-decoration:none;
+}
+
+.social-icons a:hover{
+color:#ff4b0a;
+border-color:#ff4b0a;
+}
+/* ─── MOBILE ─── */
+
+@media (max-width: 700px) {
+  .nav {
+    display: none;
+  }
+
+  .topbar {
+    padding: 0 16px;
+  }
+
+  .header {
+    padding: 0 16px;
+  }
+
+  .steps {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  .step {
+    border-right: none;
+    border-bottom: 1px solid #d8d8d8;
+  }
+
+  .step:last-child {
+    border-bottom: none;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 16px;
+  }
+
+  .form-row label {
+    width: auto;
+    text-align: left;
+    padding-right: 0;
+    margin-bottom: 4px;
+  }
+
+  .form-row input {
+    width: 100%;
+  }
+
+
+  .captcha-wrap,
+.submit-wrap{
+margin-top:15px;
+margin-left:170px;
+}
+
+
+  .hero-title {
+    font-size: 26px;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .cert-card,
+  .cert-footer {
+    width: 100%;
+  }
+
+  .main-intro {
+    font-size: 17px;
+  }
+
+  .footer {
+    padding: 36px 20px 20px;
+  }
+
+ .footer-bottom{
+max-width:1100px;
+margin:40px auto 0;
+
+padding-top:20px;
+border-top:none;
+
+font-size:11px;
+color:rgba(255,255,255,.25);
+}
+/* MOBILE PHONES */
+@media (max-width: 768px) {
+
+  .topbar{
+    display:none;
+  }
+
+  .header{
+    flex-direction:column;
+    height:auto;
+    padding:15px;
+    gap:15px;
+  }
+
+  .logo img{
+    width:180px;
+  }
+
+  .nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+  }
+
+  .nav a{
+    font-size:13px;
+  }
+
+  .header-icons{
+    justify-content:center;
+    width:100%;
+  }
+
+  .hero{
+    height:140px;
+  }
+
+  .hero-title{
+    font-size:28px;
+    text-align:center;
+    padding:0 20px;
+  }
+
+  .breadcrumb{
+    padding:10px 15px;
+    font-size:12px;
+  }
+
+  .main{
+    padding:30px 15px;
+  }
+
+  .main-intro{
+    font-size:16px;
+  }
+
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .step{
+    border-right:none;
+    border-bottom:1px solid #ddd;
+    padding:20px;
+  }
+
+  .form-row{
+    flex-direction:column;
+    align-items:flex-start;
+    max-width:100%;
+  }
+
+  .form-row label{
+    width:auto;
+    text-align:left;
+  }
+
+  .form-row input{
+    width:100%;
+  }
+
+  .captcha-wrap,
+  .submit-wrap{
+    margin-left:0;
+  }
+
+  .captcha-img{
+    width:140px;
+  }
+
+  .cert-card,
+  .cert-footer{
+    width:100%;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    row-gap:40px;
+    padding:0 25px;
+  }
+
+  .social-icons{
+    justify-content:flex-start;
+  }
+
+  .footer-bottom{
+    padding-left:25px;
+  }
+}
+@media (max-width: 768px){
+
+  .topbar{
+    display:none;
+  }
+
+  .header{
+    display:block;
+    text-align:center;
+    padding:15px;
+  }
+
+  .nav{
+    display:none;
+  }
+
+  .header-icons{
+    display:none;
+  }
+
+  .logo img{
+    width:230px;
+  }
+
+  .hero-title{
+    font-size:40px;
+  }
+}
+.mobile-menu-btn{
+  display:none;
+}
+
+@media (max-width:768px){
+
+  .mobile-menu-btn{
+    display:block;
+    position:absolute;
+    right:20px;
+    top:25px;
+    font-size:30px;
+    background:none;
+    border:none;
+    cursor:pointer;
+  }
+}
+}

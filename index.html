@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<button class="mobile-menu-btn">☰</button>
+<title>Certificate Verification Service</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="https://www.peoplecert.org/" class="active">Professionals</a>
+    <a href="https://www.peoplecert.org/Organizations">Organizations</a>
+    <a href="https://www.peoplecert.org/Partners">Partners</a>
+  </div>
+
+  <div class="topbar-right">
+    <a href="https://www.peoplecert.org/About-us">About Us</a>
+    <a href="https://www.languagecert.org/en">LANGUAGECERT</a>
+  </div>
+</div>
+
+<header class="header">
+
+<div class="logo">
+<img src="images/pc-logo-25th-ann-07022025.svg"
+alt="PeopleCert">
+</div>
+
+<nav class="nav">
+
+<a href="#">Certifications</a>
+
+<a href="#">Membership</a>
+
+<a href="#">Ambassadors</a>
+
+<a href="#">Ways to get certified</a>
+
+<a href="#">Find your next job</a>
+
+</nav>
+
+<div class="header-icons">
+
+<span>🔍</span>
+
+<span>🌐 EN | PK ▼</span>
+
+<span>🛍</span>
+
+<span>👤</span>
+
+</div>
+
+</header>
+
+<section class="hero">
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+
+<h1 class="hero-title">
+Certificate Verification Service
+</h1>
+</section>
+
+<div class="breadcrumb">
+🏠 / For Corporations /
+Certificate Verification Service
+</div>
+
+<div class="main">
+
+<p class="main-intro">
+To check the validity of a certificate,
+please follow the instructions below:
+</p>
+
+<div class="steps">
+
+<div class="step">
+<span class="step-num">1</span>
+Type the Certificate Number as it appears on the certificate.
+</div>
+
+<div class="step">
+<span class="step-num">2</span>
+Complete the Image Verification field.
+</div>
+
+<div class="step">
+<span class="step-num">3</span>
+Click Submit.
+</div>
+
+</div>
+
+<div class="form-section">
+
+<div class="form-row">
+<label>Certificate number</label>
+
+<input
+type="text"
+id="certificateNumber"
+placeholder="GR526028583AN">
+</div>
+
+<div class="form-row">
+<label>Image verification</label>
+
+<input
+type="text"
+id="captchaInput"
+placeholder="Type the number you see">
+</div>
+
+<div class="captcha-wrap">
+
+<div class="captcha-img">
+<span
+class="captcha-text"
+id="captchaText">
+</span>
+</div>
+
+<a
+class="captcha-link"
+onclick="generateCaptcha();return false;">
+refresh
+</a>
+
+
+
+
+
+</div>
+
+<div class="submit-wrap">
+<button
+class="submit-btn"
+onclick="verifyCertificate()">
+Submit
+</button>
+</div>
+
+</div>
+
+<div
+id="resultBox"
+class="result-section">
+</div>
+
+</div>
+
+<footer class="footer">
+
+<div class="footer-grid">
+
+<div class="footer-col">
+<h4>Professionals</h4>
+<ul>
+<li><a href="https://www.peoplecert.org/browse-certifications" target="_blank">Certifications</a></li>
+<li><a href="https://www.peoplecert.org/membership" target="_blank">Membership</a></li>
+<li><a href="https://www.peoplecert.org/peoplecert-ambassadors" target="_blank">Ambassadors</a></li>
+<li><a href="https://www.peoplecert.org/ways-to-get-certified" target="_blank">Ways to get certified</a></li>
+<li><a href="https://www.peoplecert.org/for-organizations" target="_blank">Organizations</a></li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h4>Partners</h4>
+<ul>
+<li><a href="https://www.peoplecert.org/partners" target="_blank">Why PeopleCert</a></li>
+<li><a href="https://www.peoplecert.org/partners" target="_blank">Our Service</a></li>
+<li><a href="https://www.peoplecert.org/accreditation" target="_blank">Accreditation</a></li>
+<li><a href="https://www.peoplecert.org/partners" target="_blank">Partner Support</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>PeopleCert Membership</h4>
+
+<p style="margin-bottom:15px;">
+Elevate your career
+</p>
+
+<a href="https://www.peoplecert.org/membership"
+target="_blank"
+class="join-btn">
+Join now
+</a>
+
+</div>
+
+<div class="footer-col">
+<h4>About Us</h4>
+<ul>
+<li>
+<a href="https://www.peoplecert.org/about-us" target="_blank">
+Vision Mission
+</a>
+</li>
+
+<li>
+<a href="https://www.peoplecert.org/about-us/careers" target="_blank">
+Careers
+</a>
+</li>
+
+<li>
+<a href="https://www.peoplecert.org/about-us" target="_blank">
+Awards
+</a>
+</li>
+
+</ul>
+</div>
+
+<div class="footer-col">
+<h4>Support</h4>
+<ul>
+
+<li>
+<a href="https://www.peoplecert.org/help-and-support" target="_blank">
+Help Center
+</a>
+</li>
+
+<li>
+<a href="https://www.peoplecert.org/privacy-policy" target="_blank">
+Privacy Policy
+</a>
+</li>
+
+<li>
+<a href="https://www.peoplecert.org/terms-of-service-and-privacy-policy" target="_blank">
+Legal
+</a>
+</li>
+
+</ul>
+</div>
+<div class="footer-col">
+<h4>FOLLOW US ON</h4>
+
+<div class="social-icons">
+
+<a href="https://facebook.com">
+F
+</a>
+
+<a href="https://linkedin.com">
+in
+</a>
+
+<a href="https://youtube.com">
+▶
+</a>
+
+<a href="https://x.com">
+X
+</a>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Certificate Verification Service
+</div>
+
+</footer>
+
+<script src="certificates.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
