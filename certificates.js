@@ -84,5 +84,19 @@ const certificates = {
    certificateType: "LanguageCert Level 1 Certificate in ESOL International (Listening, Reading, Writing, Speaking) (Communicator B2)",
     module: "LanguageCert ESOL Β2 International LRWS",
     examDate: "	29 Jul 2025 "
+},
+        "GR839131818AQ": {
+    firstName: "	ABDUL ",
+    lastName: "	QADEER ",
+    certificateType: "	LanguageCert Level 1 Certificate in ESOL International (Speaking) (Communicator B2)",
+    module: "		LanguageCert Level 1 Certificate in ESOL International (Speaking) (Communicator B2)",
+    examDate: "	15 Jul 2025 "
+},
+      "GR839131819AQ": {
+    firstName: " ABDUL ",
+    lastName: " QADEER ",
+   certificateType: "LanguageCert Level 1 Certificate in ESOL International (Listening, Reading, Writing, Speaking) (Communicator B2)",
+    module: "LanguageCert ESOL Β2 International LRWS",
+    examDate: "	29 Jul 2025 "
 }
 };
