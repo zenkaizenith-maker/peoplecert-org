@@ -113,3 +113,4 @@ const certificates = {
     module: "LanguageCert ESOL Β2 International LRWS",
     examDate: "	15 Jun 2025 "
 }
+};
