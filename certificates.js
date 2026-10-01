@@ -238,7 +238,7 @@ const certificates = {
    certificateType: "	LanguageCert Level 1 Certificate in ESOL International (Speaking) (Communicator B2)",
     module: "		LanguageCert Level 1 Certificate in ESOL International (Speaking) (Communicator B2)",
     examDate: "	11 Jul 2025 "
-         }
+         },
     "GR838141718SS": {
     firstName: " SYED MUHAMMAD UZAIR ",
     lastName: "	SARDAR ",
